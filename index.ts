@@ -6,13 +6,14 @@ import cors from "cors";
 // DB Connection Class
 import DbConnection from "./src/util/db";
 import apiRoutes from "./src/routes";
+import morgan from "morgan";
 
 // middlewares use
 require("dotenv").config();
 const app = express();
 app.use(express.json());
 app.use(cors());
-
+app.use(morgan('combined'));
 // mongoDB connection, just pass the mongo url
 new DbConnection(process.env.mongoURL);
 
@@ -30,5 +31,5 @@ const errorHandlers = (err: any, req: any, res: any, next: any) => {
 app.use(errorHandlers);
 
 app.listen(process.env.PORT || 5000, () => {
-  console.log("listening on port 5000");
+  console.log("listening on port 5000 🤟🔥🤟");
 });
