@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
-    .then(() => console.log('mongodb connection established.'))
+    .then(() => console.log('mongodb connection established. ⚔️📡'))
   }
 }  
     
